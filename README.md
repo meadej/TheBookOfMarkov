@@ -1,6 +1,6 @@
 # The Book of Markov
 A new book of the Bible created using (pseudo) Markov chains with the actual contents of the Bible as the initial corpus.
-![](https://i.imgur.com/zprWuBz.jpg)
+![](https://i.imgur.com/GoZkDK2.jpg)
 
 ### Selected Excerpts from The Book of Markov
 *
