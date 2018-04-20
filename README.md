@@ -3,6 +3,7 @@ A new book of the Bible created using (pseudo) Markov chains with the actual con
 ![](https://i.imgur.com/GoZkDK2.jpg)
 
 ### Selected Excerpts from The Book of Markov
+:-------------------|:----------------------------------------
 * [Early testing] 	| *"I understand righteousness lodged that rejoiced for Jesus' disciple was little owl"*
 * [Early testing] 	| *"For God giveth no yellow hair"*
 * [Vol. I, 47:9] 	| *"Draw ye received authority I forget my pomegranate round"*
