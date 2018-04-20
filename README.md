@@ -12,4 +12,4 @@ A new book of the Bible created using (pseudo) Markov chains with the actual con
 * [Vol. IV, 53:6  ] 	 *"Behold bless ye multiplied more with shoes yea than silver"*
 
 ### Credits
-* The original Biblical text came from [project gutenberg](https://www.gutenberg.org/).
+* The original King James Biblical text came from [project gutenberg](https://www.gutenberg.org/).
