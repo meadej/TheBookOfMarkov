@@ -104,17 +104,24 @@ def biblify(input_string):
     words_arr.insert(0, "[1:1] ")
 
     word_count = 0
-    for i in range(0, len(words_arr)):
-        if words_arr[i + 1][0].isUpper():
-            if word_count > random(15, 20):
-                if random(0,3) == 2:
-                    if verse > random(20, 30):
+    for i in range(0, len(words_arr) - 1):
+        if words_arr[i][0].isupper():
+            if word_count > randint(25, 40):
+                if randint(1,3) == 2:
+                    if verse >= randint(20, 30):
                         chapter += 1
                         verse = 1
                     else:
                         verse += 1
-                    word_arr[i:i+7] = [".", " ", "[", str(chapter), ":", str(verse), "]", " "]
-    return input_string[0]
+                    words_arr.insert(i, ".")
+                    words_arr.insert(i + 1, "\n")
+                    words_arr.insert(i + 2, "[" + str(chapter) + ":" + str(verse) + "]")
+                    word_count = 0;
+        word_count += 1;
+
+    words_arr.append(".")
+    ret_str = " ".join(words_arr)
+    return re.sub(r'\s\.', ".", ret_str)
 
 def main():
     usg_str = "python markov.py [starting key phrase] [length of string]"
@@ -124,7 +131,9 @@ def main():
     content = read_corpus(os.path.join(os.path.dirname(__file__),"corpus/holybible.txt"))
     dict = generate_dictionary(content)
     dict_with_probs = add_probabilities(dict)
-    print(generate_chain(dict_with_probs, sys.argv[1],int(sys.argv[2])))
+    chain = generate_chain(dict_with_probs, sys.argv[1],int(sys.argv[2]))
+    biblified_chain = biblify(chain)
+    print(biblified_chain)
 
 if __name__ == "__main__":
     main()
