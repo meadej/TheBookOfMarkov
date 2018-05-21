@@ -121,7 +121,7 @@ def biblify(input_string):
 
     words_arr.append(".")
     ret_str = " ".join(words_arr)
-    return re.sub(r'\s\.', ".", ret_str)
+    return re.sub(r'\s\.', ".", ret_str)    
 
 def main():
     usg_str = "python markov.py [starting key phrase] [length of string]"
