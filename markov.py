@@ -124,11 +124,11 @@ def biblify(input_string):
     return re.sub(r'\s\.', ".", ret_str)    
 
 def main():
-    usg_str = "python markov.py [starting key phrase] [length of string]"
-    if len(sys.argv) != 3:
+    usg_str = "python markov.py [starting key phrase] [length of string] [filename]"
+    if len(sys.argv) != 4:
         print(usg_str)
         return
-    content = read_corpus(os.path.join(os.path.dirname(__file__),"corpus/holybible.txt"))
+    content = read_corpus(os.path.join(os.path.dirname(__file__),sys.argv[3]))
     dict = generate_dictionary(content)
     dict_with_probs = add_probabilities(dict)
     chain = generate_chain(dict_with_probs, sys.argv[1],int(sys.argv[2]))
